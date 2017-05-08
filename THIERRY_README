@@ -1,0 +1,25 @@
+From
+    http://www.tothenew.com/blog/build-restful-api-using-node-and-hapi/
+Installation
+    Create the package.json
+    Open AS ADMINISTRATOR gitbash on the project then
+        /m/Cuivre/Tools/nodejs/npm install
+
+Start app.js then check
+    http://localhost:7002/api/user
+    http://localhost:7002/documentation
+
+Start mongo server
+    use restdemo
+
+
+
+
+
+
+**********BAK****************************************************************************************
+    http://www.mrgeek.me/technology/tutorials/node-js/building-a-rest-api-using-hapi-js-and-mongodb/
+    In the terminal:
+        set PATH=M:\Cuivre\Tools\nodejs
+
+
