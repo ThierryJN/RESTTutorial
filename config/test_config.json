@@ -1,0 +1,4 @@
+{
+  "DBHost": "mongodb://localhost/restdemo",
+  "DBPort": 7002
+}

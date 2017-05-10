@@ -1,7 +1,7 @@
 {
   "name": "RESTTutorial",
   "version": "1.0.0",
-  "description": "Tutorial from http://www.tothenew.com/blog/build-restful-api-using-node-and-hapi/",
+  "description": "Inspired by http://www.tothenew.com/blog/build-restful-api-using-node-and-hapi and https://github.com/pashariger/testing-hapi",
   "main": "app.js",
   "dependencies": {
     "good": "^6.0.0",
@@ -10,5 +10,12 @@
     "hapi-swagger": "0.7.3",
     "joi": "^6.4.2",
     "mongoose": "^4.0.3"
+  },
+  "devDependencies": {
+    "code": "^3.0.1",
+    "lab": "^10.9.0",
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "mocha": "^2.4.5"
   }
 }

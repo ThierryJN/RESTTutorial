@@ -4,28 +4,33 @@
 // ================ Base Setup ========================
 // Include Hapi package
 var Hapi = require('hapi');
+var Pack = require('./package.json');
 
 // Create Server Object
-var server = new Hapi.Server();
-
+var initialized_server = new Hapi.Server();
 var mongoose   = require('mongoose');
-mongoose.connect('mongodb://localhost/restdemo'); // connect to local database
+var config = require('./config/test_config');
+mongoose.connect(config.DBHost); // connect to local database
 
 // Define PORT number
-server.connection({port: 7002});
+initialized_server.connection({port: config.DBPort});
 
 // Register Swagger Plugin ( Use for documentation and testing purpose )
-server.register({
+initialized_server.register({
     register: require('hapi-swagger'),
     options: {
-        apiVersion: "0.0.1"
+        info: {
+            title: Pack.name,
+            description: Pack.description,
+            version: Pack.version
+        }
     }
 }, function (err) {
     if (err) {
-        server.log(['error'], 'hapi-swagger load error: ' + err)
+        initialized_server.log(['error'], 'hapi-swagger load error: ' + err)
     } else {
-        server.log(['start'], 'hapi-swagger interface loaded')
+        initialized_server.log(['start'], 'hapi-swagger interface loaded')
     }
 });
 
-module.exports = server;
+module.exports = initialized_server;
